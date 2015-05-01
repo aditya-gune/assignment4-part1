@@ -7,24 +7,52 @@
 
 <body>
 <?php
-$min_multiplicand = 1;
-$max_multiplicand = 1;
-$min_multiplier = 1;
-$max_multiplier = 1;
+$min_multiplicand = $_GET["minmultiplicand"];
+$max_multiplicand = $_GET["maxmultiplicand"];
+$min_multiplier = $_GET["minmultiplier"];
+$max_multiplier = $_GET["maxmultiplier"];
 $errorflag = false;
+$tempVar;
 
-foreach($_GET as $min_multiplicand => $max_multiplicand){
+
 		if($min_multiplicand > $max_multiplicand){
 		echo "Error: Minimum multiplicand larger than maximum";
 		$errorflag = true;
 		}
-}
+		if(gettype($min_multiplicand) != "integer")
+			echo "Error: Minimum multiplicand is not an integer.";
+		if(gettype($max_multiplicand) != "integer")
+			echo "Error: Maximum multiplicand is not an integer.";
 
-foreach($_GET as $min_multiplier => $max_multiplier){
 	if($min_multiplier > $max_multiplier){
 		echo "Error: Minimum multiplier larger than maximum";
 		$errorflag = true;
 		}
+		if(gettype($min_multiplier) != "integer")
+			echo "Error: Minimum multiplier is not an integer.";
+		if(gettype($max_multiplier) != "integer")
+			echo "Error: Maximum multiplier is not an integer.";
+
+
+if($errorflag == false)
+{
+	echo '<p><h3>Multiplication Table</h3>
+<p>
+<table border="1">
+<tr>
+<td>Key
+<td>Value';
+
+for($i = $min_multiplier; $i < $max_multiplier; $i++) {
+  echo '<tr>';
+  for($j = $min_multiplicand; $j < $max_multiplicand; $j++) {
+  echo '<td>' . $i * $j;
+  }
+}
+  
+echo '<table>';
+
+	
 	
 }
 
