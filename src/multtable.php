@@ -36,17 +36,18 @@ $tempVar;
 
 if($errorflag == false)
 {
-	echo '<p><h3>Multiplication Table</h3>
-<p>
-<table border="1">
-<tr>
-<td>Key
-<td>Value';
+	
+	echo '<p><h3>Multiplication Table</h3>';
+	echo '<p>
+	<table border="1">';
+	for($i = $min_multiplier; $i < $max_multiplier; $i++) {
+	echo '<tr>
+	<th><th>' . $i;
 
 for($i = $min_multiplier; $i < $max_multiplier; $i++) {
   echo '<tr>';
   for($j = $min_multiplicand; $j < $max_multiplicand; $j++) {
-  echo '<td>' . $i * $j;
+  echo '<td><td>' . $i * $j;
   }
 }
   
