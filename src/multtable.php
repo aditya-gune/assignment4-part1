@@ -12,43 +12,72 @@ $max_multiplicand = $_GET["maxmultiplicand"];
 $min_multiplier = $_GET["minmultiplier"];
 $max_multiplier = $_GET["maxmultiplier"];
 $errorflag = false;
+$emptyflag = false;
 $tempVar = $min_multiplicand;
 
-
+		if(empty($min_multiplicand)){
+				echo "Error: Minimum multiplicand is missing.\r\n";
+				$errorflag = true;
+				$emptyflag = true;
+		}
+		if(empty($max_multiplicand)){
+				echo "Error: Maximum multiplicand is missing.\r\n";
+				$errorflag = true;
+				$emptyflag = true;
+		}
+		if(!is_numeric($min_multiplicand)){
+			echo "Error: Minimum multiplicand is not an integer.\r\n";
+			$errorflag = true;
+		}
+		if(!is_numeric($max_multiplicand)){
+			echo "Error: Maximum multiplicand is not an integer.\r\n";
+			$errorflag = true;
+		}
 		if($min_multiplicand > $max_multiplicand){
-		echo "Error: Minimum multiplicand larger than maximum";
-		$errorflag = true;
+			echo "Error: Minimum multiplicand larger than maximum.\r\n";
+			$errorflag = true;
 		}
-		if(gettype($min_multiplicand) != "integer")
-			echo "Error: Minimum multiplicand is not an integer.";
-		if(gettype($max_multiplicand) != "integer")
-			echo "Error: Maximum multiplicand is not an integer.";
-
-	if($min_multiplier > $max_multiplier){
-		echo "Error: Minimum multiplier larger than maximum";
-		$errorflag = true;
+		
+		
+		if(empty($min_multiplier)){
+				echo "Error: Minimum multiplier is missing.\r\n";
+				$errorflag = true;
+				$emptyflag = true;
 		}
-		if(gettype($min_multiplier) != "integer")
-			echo "Error: Minimum multiplier is not an integer.";
-		if(gettype($max_multiplier) != "integer")
-			echo "Error: Maximum multiplier is not an integer.";
+		if(empty($max_multiplier)){
+				echo "Error: Maximum multiplier is missing.\r\n";
+				$errorflag = true;
+				$emptyflag = true;
+		}
+		if(!is_numeric($min_multiplier)){
+			echo "Error: Minimum multiplier is not an integer.\r\n";
+			$errorflag = true;
+		}
+		if(!is_numeric($max_multiplier)){
+			echo "Error: Maximum multiplier is not an integer.\r\n";
+			$errorflag = true;
+		}
+		else if($min_multiplier > $max_multiplier){
+			echo "Error: Minimum multiplier larger than maximum.\r\n";
+			$errorflag = true;
+		}
 
 
 if($errorflag == false)
 {
 	
-	echo '<p><h3>Multiplication Table</h3>';
+	echo '<p><h3>Ye Olde Multiplication Table</h3>';
 	echo '<p>
 	<table border="1">
 	<tr><th>';
-	for($i = $min_multiplier; $i < $max_multiplier; $i++) {
+	for($i = $min_multiplier; $i <= $max_multiplier; $i++) {
 	echo '<th>' . $i;
 	}
-for($i = $min_multiplier; $i < $max_multiplier; $i++) {
+ for($j = $min_multiplicand; $j <= $max_multiplicand; $j++) {
 	echo '<tr>';
 	echo '<th>' . $tempVar;
 	$tempVar2 = $min_multiplier;
-  for($j = $min_multiplicand; $j < $max_multiplicand; $j++) {
+	for($i = $min_multiplier; $i <= $max_multiplier; $i++) {
 	  
 	  echo '<td>' . $tempVar2 * $tempVar;
 	  $tempVar2++;
