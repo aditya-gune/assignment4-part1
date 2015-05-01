@@ -12,7 +12,7 @@ $max_multiplicand = $_GET["maxmultiplicand"];
 $min_multiplier = $_GET["minmultiplier"];
 $max_multiplier = $_GET["maxmultiplier"];
 $errorflag = false;
-$tempVar;
+$tempVar = $min_multiplicand;
 
 
 		if($min_multiplicand > $max_multiplicand){
@@ -39,16 +39,22 @@ if($errorflag == false)
 	
 	echo '<p><h3>Multiplication Table</h3>';
 	echo '<p>
-	<table border="1">';
+	<table border="1">
+	<tr><th>';
 	for($i = $min_multiplier; $i < $max_multiplier; $i++) {
-	echo '<tr>
-	<th><th>' . $i;
-
+	echo '<th>' . $i;
+	}
 for($i = $min_multiplier; $i < $max_multiplier; $i++) {
-  echo '<tr>';
+	echo '<tr>';
+	echo '<th>' . $tempVar;
+	$tempVar2 = $min_multiplier;
   for($j = $min_multiplicand; $j < $max_multiplicand; $j++) {
-  echo '<td><td>' . $i * $j;
+	  
+	  echo '<td>' . $tempVar2 * $tempVar;
+	  $tempVar2++;
+	  
   }
+  $tempVar++;
 }
   
 echo '<table>';
@@ -56,7 +62,6 @@ echo '<table>';
 	
 	
 }
-
 
 
 
