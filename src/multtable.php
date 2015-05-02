@@ -18,12 +18,10 @@ $tempVar = $min_multiplicand;
 		if(empty($min_multiplicand)){
 				echo "Error: Minimum multiplicand is missing.\r\n";
 				$errorflag = true;
-				$emptyflag = true;
 		}
 		if(empty($max_multiplicand)){
 				echo "Error: Maximum multiplicand is missing.\r\n";
 				$errorflag = true;
-				$emptyflag = true;
 		}
 		if(!is_numeric($min_multiplicand)){
 			echo "Error: Minimum multiplicand is not an integer.\r\n";
@@ -31,6 +29,14 @@ $tempVar = $min_multiplicand;
 		}
 		if(!is_numeric($max_multiplicand)){
 			echo "Error: Maximum multiplicand is not an integer.\r\n";
+			$errorflag = true;
+		}
+		if($max_multiplicand < 0){
+			echo "Error: Maximum multiplicand cannot be negative.\r\n";
+			$errorflag = true;
+		}
+		if($min_multiplicand < 0){
+			echo "Error: Minimum multiplicand cannot be negative.\r\n";
 			$errorflag = true;
 		}
 		if($min_multiplicand > $max_multiplicand){
@@ -42,12 +48,10 @@ $tempVar = $min_multiplicand;
 		if(empty($min_multiplier)){
 				echo "Error: Minimum multiplier is missing.\r\n";
 				$errorflag = true;
-				$emptyflag = true;
 		}
 		if(empty($max_multiplier)){
 				echo "Error: Maximum multiplier is missing.\r\n";
 				$errorflag = true;
-				$emptyflag = true;
 		}
 		if(!is_numeric($min_multiplier)){
 			echo "Error: Minimum multiplier is not an integer.\r\n";
@@ -57,7 +61,15 @@ $tempVar = $min_multiplicand;
 			echo "Error: Maximum multiplier is not an integer.\r\n";
 			$errorflag = true;
 		}
-		else if($min_multiplier > $max_multiplier){
+		if($max_multiplier < 0){
+			echo "Error: Maximum multiplier cannot be negative.\r\n";
+			$errorflag = true;
+		}
+		if($min_multiplir < 0){
+			echo "Error: Minimum multiplier cannot be negative.\r\n";
+			$errorflag = true;
+		}
+		if($min_multiplier > $max_multiplier){
 			echo "Error: Minimum multiplier larger than maximum.\r\n";
 			$errorflag = true;
 		}
