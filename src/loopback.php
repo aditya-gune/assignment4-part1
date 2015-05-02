@@ -6,5 +6,20 @@
 </head>
 
 <body>
+<?php
+
+//$newArr = array();
+
+foreach($_GET as $key => $value) {
+	
+echo "{Type: GET, Parameters: " . json_encode($_GET) . "}";
+}
+
+if(empty($_GET))
+echo "{Type: GET, Parameters: null}";
+
+
+
+?>
 </body>
 </html>
