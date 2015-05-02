@@ -6,5 +6,10 @@
 </head>
 
 <body>
+<form action="content1.php" method="post">
+Username: <input type="text" name="username"><br>
+<input type="submit" name = "Login">
+</form>
+
 </body>
 </html>
