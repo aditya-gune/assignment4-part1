@@ -25,26 +25,24 @@ if(session_status() == PHP_SESSION_ACTIVE) {
   {if(!isset($_SESSION['visits'])) {
     $_SESSION['visits'] = 0;
   	}
+	
 
   	$_SESSION['visits']++;
-  	echo 'Hi '. $_SESSION['username'] . ', you have visited this page ' . $_SESSION[visits] . ' 			times.\r\n';
+  	echo 'Hi '. $_SESSION['username'] . ', you have visited this page ' . $_SESSION[visits] . ' 			times.';
 	echo '<a href="content2.php">content2.php</a>';
+	?>
+    <form action="login.php" method="post">
+<input type="submit" value = "Logout">
+</form>
+<?php
 
  
 }
 }
 
-if(isset($_POST['action']) && $_POST['action'] == 'end') {
-  $_SESSION = array(); 
-  session_destroy();   
-  $filePath = explode('/', $_SERVER['PHP_SELF'], -1); 
-  $filePath = implode('/', $filePath); 
-  $redirect = "http://" . $_SERVER['HTTP_HOST'] . $filePath; 
-  header("Location: {$redirect}/login.php", true); 
-  die();
-}
-
-
 ?>
+
+
+
 </body>
 </html>

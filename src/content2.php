@@ -6,5 +6,5 @@
 </head>
 
 <body>
-</body>
+<a href="content1.php">content1.php</a></body>
 </html>
