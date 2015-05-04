@@ -1,0 +1,51 @@
+Start:Sun, 3 May 2015 23:02:32 -0400
+End:Sun, 3 May 2015 23:03:06 -0400
+Tasks: Merge remote-tracking branch 'origin/login,-content,-content2'
+
+Start:Sun, 3 May 2015 22:55:32 -0400
+End:Sun, 3 May 2015 23:02:32 -0400
+Tasks: Debugging
+
+Start:Sun, 3 May 2015 19:51:00 -0400
+End:Sun, 3 May 2015 22:55:32 -0400
+Tasks: Added sessions function.
+
+Start:Sat, 2 May 2015 11:21:26 -0400
+End:Sat, 2 May 2015 13:34:39 -0400
+Tasks: added form outline
+
+Start:Sat, 2 May 2015 11:15:00 -0400
+End:Sat, 2 May 2015 11:21:26 -0400
+Tasks: Added login.php
+
+Start:Fri, 1 May 2015 20:01:34 -0400
+End:Fri, 1 May 2015 21:38:12 -0400
+Tasks: added loopback.php and its function
+
+Start:Fri, 1 May 2015 19:55:00 -0400
+End:Fri, 1 May 2015 20:01:34 -0400
+Tasks: Changed the name of the table
+
+Start:Fri, 1 May 2015 18:45:33 -0400
+End:Fri, 1 May 2015 19:55:00 -0400
+Tasks: Error display
+
+Start:Fri, 1 May 2015 18:13:29 -0400
+End:Fri, 1 May 2015 18:45:33 -0400
+Tasks: Calculation
+
+Start:Fri, 1 May 2015 18:01:58 -0400
+End:Fri, 1 May 2015 18:13:29 -0400
+Tasks: table formatting
+
+Start:Fri, 1 May 2015 17:22:00 -0400
+End:Fri, 1 May 2015 18:01:58 -0400
+Tasks: Added mult table function
+
+Start:Tue, 28 Apr 2015 20:37:38 -0400
+End:Tue, 28 Apr 2015 21:47:01 -0400
+Tasks: Data validation for min and max vars
+
+Start: Tue, 28 Apr 2015 20:15:06 -0400
+End:Tue, 28 Apr 2015 20:37:38 -0400
+Tasks: Created multtable.php
